@@ -1,8 +1,8 @@
 :root {
-  --background-color: #fefefe;
+  --primary-color: #fefefe;
   --secondary-color: #fdee30;
-  --primary-color: #565659;
-  --primary-dark: #000000;
+  --accent-gray: #565659;
+  --accent-black: #000000;
 }
 
 * {
@@ -29,7 +29,7 @@ body {
 -------------- */
 
 a {
-  color: var(--background-color);
+  color: var(--primary-color);
   transition: 0.5s;
   text-decoration: none;
 }
@@ -47,6 +47,7 @@ a:focus {
 -------------- */
 #header {
   height: 90px;
+  width: 100%;
   padding: 25px 0;
   position: fixed;
   left: 0;
@@ -55,9 +56,9 @@ a:focus {
   z-index: 997;
 }
 
-#header .pull-left {
+/* #header .pull-left {
   float: left;
-}
+} */
 
 #header img {
   max-height: 40px;
@@ -68,17 +69,10 @@ a:focus {
 -------------- */
 
 /* Nav Menu Essentials */
+
 .nav-menu,
 .nav-menu * {
   list-style: none;
-}
-
-.container {
-  display: flex;
-  background: red;
-  align-items: center;
-  justify-content: space-between;
-  /* padding: 20px 0; */
 }
 
 /* .nav-menu ul {
@@ -94,20 +88,19 @@ a:focus {
   white-space: nowrap;
 }
 
-.nav-menu > li {
+/* .nav-menu > li {
   float: left;
-}
+} */
 
-.nav-menu ul li {
+/* .nav-menu ul li {
   min-width: 180px;
-}
+} */
 
 /* Nav Menu Container */
 #nav-menu-container {
-  float: right;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   font-size: 13px;
 }
 
@@ -115,22 +108,13 @@ a:focus {
   display: flex;
 }
 
-#nav-menu-container ul.nav-menu {
-  flex: 1;
-  /* margin-left: 20px; */
-}
-
-#nav-menu-container ul.nav-menu-right {
-  flex: 1;
-  /* margin-left: 20px; */
-}
-
 /* Nav Menu Styling */
+
 .nav-menu a {
   padding: 8px;
   text-decoration: none;
   display: inline-block;
-  color: var(--background-color);
+  color: var(--primary-color);
   font-weight: 500;
   outline: none;
   text-transform: uppercase;
@@ -162,6 +146,28 @@ a:focus {
 .nav-menu .menu-active > a:before {
   visibility: visible;
   width: 100%;
+}
+
+.nav-menu-right > li {
+  list-style: none;
+  text-decoration: none;
+}
+
+.nav-menu-right .cta-btn {
+  font-weight: 700;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 32px;
+  background: var(--secondary-color);
+  border-radius: 50px;
+  transition: 0.5s;
+  line-height: 1;
+  color: var(--accent-gray);
+  animation-delay: 0.8s;
+}
+
+.nav-menu-right .cta-btn:hover {
+  color: var(--accent-black);
 }
 
 /* --------------
@@ -201,9 +207,10 @@ a:focus {
 }
 
 #intro h1 {
-  color: var(--background-color);
+  color: var(--primary-color);
   font-size: 4rem;
   font-weight: 600;
+  letter-spacing: 1px;
 }
 
 #intro p span {
@@ -211,7 +218,7 @@ a:focus {
 }
 
 #intro p {
-  color: var(--background-color);
+  color: var(--primary-color);
   font-weight: 500;
   font-size: 1.5rem;
 }
@@ -227,25 +234,20 @@ a:focus {
   transition: 0.5s;
   line-height: 1;
   margin-top: 3rem;
-  color: var(--background-color);
+  color: var(--primary-color);
   animation-delay: 0.8s;
 }
 
 #intro .about-btn:hover {
   background: var(--secondary-color);
-  color: var(--primary-dark);
+  color: var(--accent-black);
 }
 /* --------------
 # Media Queries
 -------------- */
-@media (min-width: 1200px) {
+@media (min-width: 576px) {
   .container {
-    max-width: 1140px;
-  }
-}
-@media (min-width: 992px) {
-  .container {
-    max-width: 960px;
+    max-width: 540px;
   }
 }
 @media (min-width: 768px) {
@@ -253,8 +255,13 @@ a:focus {
     max-width: 720px;
   }
 }
-@media (min-width: 576px) {
+@media (min-width: 992px) {
   .container {
-    max-width: 540px;
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
   }
 }
