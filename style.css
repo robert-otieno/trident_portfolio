@@ -1,0 +1,260 @@
+:root {
+  --background-color: #fefefe;
+  --secondary-color: #fdee30;
+  --primary-color: #565659;
+  --primary-dark: #000000;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #fff;
+  color: #333;
+  line-height: 1.5;
+}
+
+.container {
+  width: 100%;
+  padding: 0 15px 0 15px;
+  margin: 0 auto 0 auto;
+}
+
+/* --------------
+# Links 
+-------------- */
+
+a {
+  color: var(--background-color);
+  transition: 0.5s;
+  text-decoration: none;
+}
+
+a:hover,
+a:active,
+a:focus {
+  color: var(--secondary-color);
+  outline: none;
+  text-decoration: none;
+}
+
+/* --------------
+# Header
+-------------- */
+#header {
+  height: 90px;
+  padding: 25px 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  transition: all 0.5s;
+  z-index: 997;
+}
+
+#header .pull-left {
+  float: left;
+}
+
+#header img {
+  max-height: 40px;
+}
+
+/* --------------
+# Navigation Menu
+-------------- */
+
+/* Nav Menu Essentials */
+.nav-menu,
+.nav-menu * {
+  list-style: none;
+}
+
+.container {
+  display: flex;
+  background: red;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 20px 0; */
+}
+
+/* .nav-menu ul {
+  position: absolute;
+  display: none;
+  top: 100%;
+  left: 0;
+  z-index: 99;
+} */
+
+.nav-menu li {
+  position: relative;
+  white-space: nowrap;
+}
+
+.nav-menu > li {
+  float: left;
+}
+
+.nav-menu ul li {
+  min-width: 180px;
+}
+
+/* Nav Menu Container */
+#nav-menu-container {
+  float: right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+}
+
+#nav-menu-container ul {
+  display: flex;
+}
+
+#nav-menu-container ul.nav-menu {
+  flex: 1;
+  /* margin-left: 20px; */
+}
+
+#nav-menu-container ul.nav-menu-right {
+  flex: 1;
+  /* margin-left: 20px; */
+}
+
+/* Nav Menu Styling */
+.nav-menu a {
+  padding: 8px;
+  text-decoration: none;
+  display: inline-block;
+  color: var(--background-color);
+  font-weight: 500;
+  outline: none;
+  text-transform: uppercase;
+}
+
+.nav-menu .menu-active a,
+.nav-menu a:hover {
+  color: var(--secondary-color);
+}
+
+.nav-menu > li {
+  margin-left: 8px;
+}
+
+.nav-menu > li > a:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--secondary-color);
+  visibility: hidden;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.nav-menu a:hover:before,
+.nav-menu li:hover > a:before,
+.nav-menu .menu-active > a:before {
+  visibility: visible;
+  width: 100%;
+}
+
+/* --------------
+# Intro Section
+-------------- */
+#intro {
+  width: 100%;
+  height: 100vh;
+  background: url(/img/intro-bg.jpg) top center;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+}
+
+#intro::before {
+  content: "";
+  background: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#intro .intro-container {
+  position: absolute;
+  bottom: 0;
+  top: 90px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 15px;
+}
+
+#intro h1 {
+  color: var(--background-color);
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+#intro p span {
+  color: var(--secondary-color);
+}
+
+#intro p {
+  color: var(--background-color);
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+#intro .about-btn {
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 32px;
+  border: 2px solid var(--secondary-color);
+  border-radius: 50px;
+  transition: 0.5s;
+  line-height: 1;
+  margin-top: 3rem;
+  color: var(--background-color);
+  animation-delay: 0.8s;
+}
+
+#intro .about-btn:hover {
+  background: var(--secondary-color);
+  color: var(--primary-dark);
+}
+/* --------------
+# Media Queries
+-------------- */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
