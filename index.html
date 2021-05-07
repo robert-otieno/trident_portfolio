@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,68 +14,87 @@
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
 
-     <!-- Google Fonts -->
-     <link rel="preconnect" href="https://fonts.gstatic.com">
-     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet"> 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header id="header">
         <div class="container">
-            <div id="logo" class="pull-left">
-                <a href="#" class="scrollto">
-                    <img src="img/logo.png" alt="">
-                </a>
-            </div>
+            <div class="wrapper">
+                <div id="logo" class="pull-left">
+                    <a href="#" class="scrollto">
+                        <img src="img/logo.png" alt="">
+                    </a>
+                </div>
 
-            <nav id="nav-menu-container">
-                <ul class="nav-menu">
-                    <li class="menu-active"><a href="#">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li class="cta"><a href="#">Call to action</a></li>
-                </ul>
-            </nav>
-        </div>        
+                <nav id="nav-menu-container">
+                    <ul class="nav-menu">
+                        <li class="menu-active"><a href="#">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li class="cta"><a href="#">Call to action</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </header>
 
     <!-- Intro Section -->
     <section id="intro">
         <div class="intro-container fadeIn">
-            <h1>Fast, Reliable, Efficient</h1>
-            <p><span>{</span>Eat, Sleep, <span>Code</span>, Repeat<span>}</span></p>
+            <h1 class="section-title">Fast, Reliable, Efficient</h1>
+            <p><span>{ </span>Eat, Sleep, <span>Code</span>, Repeat<span> }</span></p>
             <a href="#about" class="about-btn scrollto">About Trident</a>
         </div>
     </section>
 
     <main id="main">
-        <!-- About Section -->
 
-        <section id="about">
-            <div class="container">
-                <div class="d-flex flex-column text-center">
-                    <h1>Welcome to Trident Communications & System Solutions</h1>
+        <!-- About Section -->
+        <section id="about" class="wow fadeInUp">
+            <div class="about-container">
+                <div class="section-header">
+                    <h2 class="section-title">About Trident</h2>
                     <hr class="hr-short">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis assumenda delectus nam vel eum obcaecati eos sequi, dignissimos molestiae tenetur!</p>
-                    <div class="row">
-                        <div class="col-md-3">
-                            <i class="far fa-globe fa-2x"></i>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam harum numquam soluta. Qui
+                        mollitia quo corrupti reprehenderit aut nam nulla.</p>
+                </div>
+
+                <div id="about-content" class="row w-75 m-auto">
+                    <div class="col-md-3 card">
+                        <div class="card-body">
+                            <span class="text-secondary"><i class="fa fa-globe fa-3x"></i></span>
                             <h2>Experienced</h2>
                             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque, qui?</p>
                         </div>
-                        <div class="col-md-3">
-                            <i class="far fa-toolbox fa-2x"></i>
+                    </div>
+                    <div class="col-md-3 card">
+                        <div class="card-body">
+                            <span class="text-secondary"><i class="fa fa-toolbox fa-3x"></i></span>
                             <h2>Professional</h2>
                             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque, qui?</p>
                         </div>
-                        <div class="col-md-3">
-                            <i class="far fa-shield fa-2x"></i>
+                    </div>
+                    <div class="col-md-3 card">
+                        <div class="card-body">
+                            <span class="text-secondary"><i class="fa fa-shield-alt fa-3x"></i></span>
                             <h2>Reliable</h2>
                             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque, qui?</p>
                         </div>
-                        <div class="col-md-3">
-                            <i class="far fa-gear fa-2x"></i>
+                    </div>
+                    <div class="col-md-3 card">
+                        <div class="card-body">
+                            <span class="text-secondary"><i class="fa fa-cogs fa-3x"></i></span>
                             <h2>Easy</h2>
                             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque, qui?</p>
                         </div>
@@ -82,6 +102,38 @@
                 </div>
             </div>
         </section>
+
+        <!-- Services -->
+        <section id="services" class="wow fadeInUp">
+            <div class="services-container">
+                <div class="section-header">
+                    <h2 class="section-title">Services</h2>
+                    <hr class="hr-short">
+                </div>
+
+                <div class="section-content">
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+
+        <section id="projects" class="wow fadeInUp">
+            <div class="projects-container">
+                <div class="section-header">
+                    <h2 class="section-title">Projects</h2>
+                    <hr class="hr-short">
+                </div>
+            </div>
+        </section>
     </main>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
 </body>
+
 </html>

@@ -2,7 +2,7 @@
   --primary-color: #fefefe;
   --secondary-color: #fdee30;
   --accent-gray: #565659;
-  --accent-black: #000000;
+  --background-color: #000000;
 }
 
 * {
@@ -13,8 +13,8 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background: #000;
-  color: #fff;
+  background: var(--background-color);
+  color: var(--primary-color);
   line-height: 1.5;
 }
 
@@ -43,6 +43,30 @@ a:focus {
 }
 
 /* --------------
+# Fonts
+-------------- */
+.text-secondary {
+  color: var(--secondary-color);
+}
+
+/* --------------
+# Section
+-------------- */
+.section-title {
+  font-family: "Lora", serif;
+}
+
+.section-header {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+/* --------------
 # Header
 -------------- */
 #header {
@@ -65,12 +89,12 @@ a:focus {
 }
 
 #header #logo img {
-	max-height: 40px;
+  max-height: 40px;
 }
 
-.container {
-	display: flex;
-	justify-content: space-between;
+.wrapper {
+  display: flex;
+  justify-content: space-between;
 }
 
 /* --------------
@@ -79,28 +103,28 @@ a:focus {
 
 /* Nav Menu Essentials */
 #nav-menu-container {
-	float: right;
+  float: right;
 }
 
 .nav-menu {
-	list-style: none;
-	display: flex;
+  list-style: none;
+  display: flex;
 }
 
 .nav-menu li {
-	position: relative;
-	white-space: nowrap;
+  position: relative;
+  white-space: nowrap;
 }
 
 /* Nav Menu Styling */
 .nav-menu a {
-	padding: 8px;
+  padding: 8px;
   text-decoration: none;
   display: inline-block;
   color: #fff;
   font-weight: 500;
   outline: none;
-	text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 .nav-menu .menu-active a,
@@ -132,7 +156,7 @@ a:focus {
 }
 
 .nav-menu li.cta {
-	align-self: center;
+  align-self: center;
 }
 
 .nav-menu li.cta a {
@@ -151,7 +175,7 @@ a:focus {
 
 .nav-menu li.cta a:hover {
   background: none;
-	color: #fff;
+  color: #fff;
 }
 
 .nav-menu li.cta:hover a:before,
@@ -170,7 +194,8 @@ a:focus {
   position: relative;
 }
 
-#intro::before {
+#intro::before,
+#about::before {
   content: "";
   background: rgba(0, 0, 0, 0.8);
   position: absolute;
@@ -237,43 +262,70 @@ a:focus {
 # About Section
 -------------- */
 #about {
-  /* background: url("img/intro-bg.jpg"); */
+  /* background: url("img/about-bg.jpg"); */
   background-size: cover;
   overflow: hidden;
   position: relative;
   color: #fff;
   padding: 60px 0 40px 0;
+  transition: all 0.5s;
 }
 
 #about::before {
   content: "";
   background: rgba(0, 0, 0, 0.8);
   position: absolute;
-  bottom: 0;top: 0;left: 0;right: 0;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: -1;
 }
 
-#about h2 {
+#about h1 {
   font-size: 36px;
   font-weight: bold;
   margin-bottom: 10px;
   color: #fff;
+  text-transform: uppercase;
 }
 
 #about p {
-  font-size: 14px;
-  font-weight: bold;
-  margin-bottom: 20px;
   color: #fff;
+  text-align: center;
+  line-height: 2;
+  margin-bottom: 20px;
 }
 
-.d-flex { display: flex;}
+#about-content p {
+  line-height: 1.4;
+  font-size: 14px;
+}
 
-.flex-column { flex-direction: column;}
+.d-flex {
+  display: flex;
+  flex-direction: row;
+}
 
-.row { display: flex;}
+.flex-column {
+  flex-direction: column;
+}
 
-.col-md-3 {flex: 1;}
+.w-75 {
+  width: 75%;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.row {
+  display: flex;
+}
+
+.col-md-3 {
+  flex: 1;
+}
 
 .text-center {
   text-align: center;
@@ -286,6 +338,33 @@ a:focus {
   border: none;
   background: #fdee30;
   margin: 1.5rem 0;
+}
+
+.card {
+  background: rgba(253, 238, 48, 0.2);
+  max-width: 22rem;
+  box-shadow: 0 10px 20px 0 rgba(253, 238, 48, 0.125);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  margin: 0.5rem;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.card-body h2,
+.card-body i {
+  margin-bottom: 0.5rem;
 }
 /* --------------
 # Media Queries
